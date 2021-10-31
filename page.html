@@ -88,11 +88,18 @@
             <a href="#pricing" class="btn btn-secondary btn-large">Buy Now</a>
           </div>
           <div class="col-mid-5 text-center d-none d-md-block">
-            <img
-              class="img-fluid"
-              src="assets/ebook-cover.png"
-              alt="ebook cover"
-            />
+            <!--Tooltop-->
+            <span
+              class="tt"
+              data-bs-placement="bottom"
+              title="Net Ninja Book Cover"
+            >
+              <img
+                class="img-fluid"
+                src="assets/ebook-cover.png"
+                alt="ebook cover"
+              />
+            </span>
           </div>
         </div>
       </div>
@@ -481,6 +488,15 @@
                   id="email"
                   placeholder="e.g.mario@example.com"
                 />
+
+                <!--Tooltip-->
+                <span class="input-group-text">
+                  <span
+                    class="tt"
+                    data-bs-placement="bottom"
+                    title="Enter an email address we can reply to"
+                    ><i class="bi bi-question-circle text-muted"></i></span
+                ></span>
               </div>
 
               <label for="name" class="form-label">Name:</label>
@@ -537,5 +553,11 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script>
+      const tooltips = document.querySelectorAll(".tt");
+      tooltips.forEach((t) => {
+        new bootstrap.Tooltip(t);
+      });
+    </script>
   </body>
 </html>
